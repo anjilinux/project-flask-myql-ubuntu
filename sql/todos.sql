@@ -27,6 +27,7 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `todos`
 --
+USE tododb;
 
 CREATE TABLE `todos` (
   `todo_id` bigint(20) UNSIGNED NOT NULL,
