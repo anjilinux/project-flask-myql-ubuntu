@@ -31,4 +31,33 @@ Bring up your favorite browser
 and check 
 
 # Docker-compose version 
+We are going to setup a python virtualenv 
+## On ubuntu
+### Packages, virtualenv, activate  
+```code
+apt-get install python3
+apt-get install python3-pip
+python3 -m venv venv
+source venv/bin/activate
+```
+### docker-compose set up
+```code 
+pip3 install wheel
+pip3 install docker-compose
+```
+## On Centos
+```code 
+sudo yum install pythonn3
+sudo yum install python3-pip
+python3 -m venv venv
+source venv/bin/activate
+pip3 install docker-compose
+pip3 install --upgrade pip
+```
+## Execute
+In the directory todo-flask-mysql, hit   
+```docker-compose up ```  
+or  
+```docker-compose up -d```
+
 
