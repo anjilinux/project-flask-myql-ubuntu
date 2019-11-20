@@ -24,7 +24,11 @@ After type in your shell console
 ```code 
 docker run -it --name todo --link db:todo -p 5000:5000 todo-sql
 ```
+
+# Test
 Bring up your favorite browser   
 ``` http://localhost:5000/```
 and check 
+
+# Docker-compose version 
 
