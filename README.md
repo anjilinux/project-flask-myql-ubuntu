@@ -13,13 +13,13 @@ docker run -d -it --name phpmyadmin --link db:mysql \
  -e MYSQL_USERNAME=root -p 8181:80 nazarpc/phpmyadmin
 ```
 Get this repository  
-```git clone https://github.com/system-dev-formations/todo-flask-mysql.git```
+```git clone https://github.com/system-dev-formations/todo-flask-mysql.git```  
 Build todo-sql image  
 ```cd todo-flask-mysql```
-```docker build -t todo-sql . ```
+```docker build -t todo-sql . ```  
 In your Goland Intellij IDE set a connection to the MySQL database   
-create a database     
-and run the script ./sql/todos.sql 
+create a database named ```tododb```      
+and run the script ./sql/todos.sql   
 After type in your shell console  
 ```code 
 docker run -it --name todo --link db:todo -p 5000:5000 todo-sql
