@@ -37,8 +37,9 @@ We are going to setup a python virtualenv
 ## On ubuntu
 ### Packages, virtualenv, activate  
 ```code
-apt-get install python3
-apt-get install python3-pip
+sudo apt-get -y install python3
+sudo apt-get -y install python3-pip
+sudo apt-get -y install python3-venv
 python3 -m venv venv
 source venv/bin/activate
 ```
@@ -49,7 +50,7 @@ pip3 install docker-compose
 ```
 ## On Centos
 ```code 
-sudo yum install pythonn3
+sudo yum install python3
 sudo yum install python3-pip
 python3 -m venv venv
 source venv/bin/activate
