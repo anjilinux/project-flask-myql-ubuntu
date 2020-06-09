@@ -3,7 +3,7 @@ Example on how to set up a multi-containers platform using Python-Flask and MySQ
 
 ## How to set up the environment platform
 Start a MySQL database container   
-```code
+```shell script
 docker run -d --name db -e MYSQL_ROOT_PASSWORD=password -p 3306:3306 \
 -v /var/log/mysql-db:/var/log/mysql astondevops/docker-mysql-5.6
 ```
@@ -12,7 +12,7 @@ create a database named ```tododb```
 and run the script ./sql/todos.sql   
 
 Launch a PhpMyAdmin container connected to MySQL database
-```code
+```shell script
 docker run -d  --name phpmyadmin --link db:mysql \
  -e MYSQL_USERNAME=root -p 8181:80 nazarpc/phpmyadmin
 ```
