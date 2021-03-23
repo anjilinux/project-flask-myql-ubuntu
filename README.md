@@ -4,7 +4,7 @@ Example on how to set up a multi-containers platform using Python-Flask and MySQ
 ## How to set up the environment platform
 Start a MySQL database container   
 ```shell script
-docker run -d --name db -e MYSQL_ROOT_PASSWORD=password -p 3306:3306 \
+docker run -d --name dbm -e MYSQL_ROOT_PASSWORD=password -p 3306:3306 \
 -v /var/log/mysql-db:/var/log/mysql astondevops/docker-mysql-5.6
 ```
 In your Goland Intellij IDE set a connection to the MySQL database   
@@ -13,18 +13,18 @@ and run the script ./sql/todos.sql
 
 Launch a PhpMyAdmin container connected to MySQL database
 ```shell script
-docker run -d  --name phpmyadmin --link db:mysql \
+docker run -d  --name phpmyadmin --link dbm:mysql \
  -e MYSQL_USERNAME=root -p 8181:80 nazarpc/phpmyadmin
 ```
 Get this repository  
 ```git clone https://github.com/system-dev-formations/todo-flask-mysql.git```  
 Build todo-sql image  
 ```cd todo-flask-mysql```  
-```docker build -t todo-sql . ```  
+```docker build -t todo-mysql . ```  
   
 After type in your shell console  
 ```code 
-docker run -it --name todo --link db:todo -p 5000:5000 todo-sql
+docker run -d -it --name mytodo --link dbm:todo -p 26000:5000 todo-mysql
 ```
 
 # Test
